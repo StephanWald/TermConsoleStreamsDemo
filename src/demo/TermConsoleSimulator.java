@@ -18,7 +18,7 @@ public class TermConsoleSimulator implements Runnable {
     OutputStream osToClient;
 
 
-    public TermConsoleSimulator(InputStream isFromClient, MessagesToClientOutputStream osToClient) throws IOException {
+    public TermConsoleSimulator(InputStream isFromClient, OutputStream osToClient) throws IOException {
         this.isFromClient = isFromClient;
         this.osToClient = osToClient;
     }

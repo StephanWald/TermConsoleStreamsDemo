@@ -26,7 +26,7 @@ public class ExerciseTermConsoleDemo {
     private void run() throws IOException {
 
         InputStream isFromClient = new MessagesFromClientInputStream();
-        MessagesToClientOutputStream osToClient = new MessagesToClientOutputStream(this::consoleCallback);
+        OutputStream osToClient = new MessagesToClientOutputStream(this::consoleCallback);
         TermConsoleSimulator ts = new TermConsoleSimulator(isFromClient, osToClient);
         Thread thread = new Thread(ts);
         thread.start();
